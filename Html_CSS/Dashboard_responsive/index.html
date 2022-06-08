@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard GeekyAnts</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="wrapper_full_website">
+        <div id="mySidenav" class="sidenav">
+            <h2>GeekyAnts</h2>
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+            <a href="#"><img class="menu_icon" src="https://cdn-icons-png.flaticon.com/512/3388/3388849.png"></img><span>Home</span></a>
+            <a href="#"><img class="menu_icon" src="./image_assets/calendar.png"></img><span>Calendar</span></a> 
+            <a href="#"><img class="menu_icon" src="./image_assets/gmail.png"></img><span>Mail</span></a>
+            <a href="#"><img class="menu_icon" src="https://cdn-icons-png.flaticon.com/512/1205/1205500.png"></img><span>Form</span></a>
+            <a href="#"><img class="menu_icon" src="https://cdn-icons-png.flaticon.com/512/2302/2302867.png"></img><span>chart</span></a>
+            <a href="#"><img class="menu_icon" src="https://cdn-icons-png.flaticon.com/512/1584/1584531.png"></img><span>Table</span></a>
+            <a href="#"><img class="menu_icon" src="https://cdn-icons-png.flaticon.com/512/1827/1827251.png"></img><span>Icon</span></a>
+            <a href="#"><img class="menu_icon" src="https://cdn-icons-png.flaticon.com/512/3180/3180139.png"></img><span>Map</span></a>
+        </div>
+
+        <!-- code for the header area -->
+        <div class="header">
+
+            <!-- toggle button design -->
+            <div class="toggle_collapse" onclick="toggleNav()">
+                <div class="barline"></div>
+                <div class="barline"></div>
+                <div class="barline"></div>
+            </div>
+
+            <!-- header contents -->
+            <div class="header_contents">
+                <div class="dropdown_lorem dropdown">
+                    <select name="create" id="create_dropdown">
+                        <option value="a">abc</option>
+                        <option value="b">lorem</option>
+                        <option value="c">lorem</option>
+                    </select>
+                </div>
+                <div class="search_wrapper">
+                    <div id="search_box">
+                        <img src="./image_assets/search.png" alt="search_image">
+                    </div>
+                    <div class="language_dropdown dropdown">
+                        <select name="language">
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="french">French</option>
+                            <option value="spanish">Spanish</option>
+                        </select>
+                    </div>
+                    <div class="notification">
+                        <img src="./image_assets/bell.png" alt="notification">
+                    </div>
+                    <img src="./image_assets/may-lawrence-GBpLuDvOWDs-unsplash.jpg" alt="profileImage" class="profile_image" ß>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- content of page  -->
+        <div class="main_content">
+            <div id="dashboard_wrapper">
+                <div class="dashboard_label">
+                    <h3>Dashboard </h3>
+                    Welcome to veltrix dashboard
+                </div>
+                <div class="setting_nav">
+                    <img src="./image_assets/setting_white.png" alt="setting_icon" >
+                    <p>Setting</p>
+                </div>
+            </div>
+
+            <div class="info_cards">
+                <div class="card card_order">
+                    <div class="card_icon">
+                        <img src="./image_assets/clipboard.png" alt="orders">
+                    </div>
+                    <div class="card_info">
+                        <p class="card_heading">ORDERS</p>
+                        <p class="card_detail">1,685</p>
+                    </div>
+                    <div class="arrow">
+                        <img src="./image_assets/top.png" alt="arrow">
+                    </div>
+                    <div class="percent_label">
+                            <p>+ 12%</p>
+                    </div>
+                    <div class="card_tenure">
+                        <p>Since Last Month</p>
+                    </div>
+                    <div class="card_arrow">
+                        <img src="./image_assets/right.png" alt="right_arrow">
+                    </div>
+                </div>
+
+                <!-- another card ---------------------- -->
+                <div class="card card_revenue">
+                    <div class="card_icon">
+                        <img src="./image_assets/sticky-notes.png" alt="orders">
+                    </div>
+                    <div class="card_info">
+                        <p class="card_heading">REVENUE</p>
+                        <p class="card_detail">52,368</p>
+                    </div>
+                    <div class="arrow">
+                        <img src="./image_assets/down.png" alt="arrow">
+                    </div>
+                    <div class="percent_label">
+                            <p>-28%</p>
+                    </div>
+                    <div class="card_tenure">
+                        <p>Since Last Month</p>
+                    </div>
+                    <div class="card_arrow">
+                        <img src="./image_assets/right.png" alt="right_arrow">
+                    </div>
+                </div>
+
+
+                <div class="card card_aPrice">
+                    <div class="card_icon">
+                        <img src="./image_assets/office-material.png" alt="orders">
+                    </div>
+                    <div class="card_info">
+                        <p class="card_heading">AVERAGE PRICE</p>
+                        <p class="card_detail">15.8</p>
+                    </div>
+                    <div class="arrow">
+                        <img src="./image_assets/top.png" alt="arrow">
+                    </div>
+                    <div class="percent_label">
+                            <p>00   %</p>
+                    </div>
+                    <div class="card_tenure">
+                        <p>Since Last Month</p>
+                    </div>
+                    <div class="card_arrow">
+                        <img src="./image_assets/right.png" alt="right_arrow">
+                    </div>
+                </div>
+
+
+                <div class="card card_product">
+                    <div class="card_icon">
+                        <img src="./image_assets/briefcase.png" alt="orders">
+                    </div>
+                    <div class="card_info">
+                        <p class="card_heading">PRODUCT SOURCING</p>
+                        <p class="card_detail">2436</p>
+                    </div>
+                    <div class="arrow">
+                        <img src="./image_assets/top.png" alt="arrow">
+                    </div>
+                    <div class="percent_label">
+                            <p>+ 84%</p>
+                    </div>
+                    <div class="card_tenure">
+                        <p>Since Last Month</p>
+                    </div>
+                    <div class="card_arrow">
+                        <img src="./image_assets/right.png" alt="right_arrow">
+                    </div>
+                </div>
+            </div>
+
+            <!-- designing the transaction and chat part -->
+
+            <div class="transactions_chat_wrapper">
+
+                <div class="transaction_wrapper">
+                    <div class="scroll_effect">
+                        <p class="transaction_label">
+                            <strong>Latest Transactions</strong> 
+                        </p>
+                        <div class="transaction_headings transaction_row">
+                            <div class="headings id"># ID</div>
+                            <div class="headings name">Name</div>
+                            <div class="headings date">Date</div>
+                            <div class="headings amount">Amount</div>
+                            <div class="headings status">Status</div>
+                            <div class="headings none"></div>
+                        </div>
+                        <div class="transaction_row">
+                            <div class="data_row id id_data"># 14256</div>
+                            <div class="data_row  name name_data">
+                                <div>
+                                    <img src="./image_assets/alexander-krivitskiy-TD9rSZywT7Y-unsplash.jpg" alt="profile_image">
+                                </div>
+                                <p>Philip Sameed</p>
+                            </div>
+                            <div class="data_row  date">15/1/2018</div>
+                            <div class="data_row  amount">$94</div>
+                            <div class="data_row  status"><p class="delivered">Delivered</p></div>
+                            <div class="data_row  edit_option"><button>Edit</button></div>
+                        </div>
+                        <div class="transaction_row">
+                            <div class="data_row id id_data"># 14257</div>
+                            <div class="data_row  name name_data">
+                                <div>
+                                    <img src="./image_assets/mateus-campos-felipe-JoM_lC1WAnE-unsplash.jpg" alt="profile_image">
+                                </div>
+                                <p>Brent Shipley</p>
+                            </div>
+                            <div class="data_row  date">16/1/2018</div>
+                            <div class="data_row  amount">$112</div>
+                            <div class="data_row  status"><p class="pending">Pending</p></div>
+                            <div class="data_row  edit_option"><button>Edit</button></div>
+                        </div>
+                        <div class="transaction_row">
+                            <div class="data_row id id_data"># 14258</div>
+                            <div class="data_row  name name_data">
+                                <div>
+                                    <img src="./image_assets/nico-marks-763-mBawsfg-unsplash.jpg" alt="profile_image">
+                                </div>
+                                <p>Robert Sitton</p>
+                            </div>
+                            <div class="data_row  date">17/1/2018</div>
+                            <div class="data_row  amount">$116</div>
+                            <div class="data_row  status"><p class="delivered">Delivered</p></div>
+                            <div class="data_row  edit_option"><button>Edit</button></div>
+                        </div>
+                        <div class="transaction_row">
+                            <div class="data_row id id_data"># 14258</div>
+                            <div class="data_row  name name_data">
+                                <div>
+                                    <img src="./image_assets/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="profile_image">
+                                </div>
+                                <p>Alberto Jackson</p>
+                            </div>
+                            <div class="data_row  date">18/1/2018</div>
+                            <div class="data_row  amount">$109</div>
+                            <div class="data_row  status"><p class="cancel">Cancel</p></div>
+                            <div class="data_row  edit_option"><button>Edit</button></div>
+                        </div>
+                        <div class="transaction_row">
+                            <div class="data_row id id_data"># 14258</div>
+                            <div class="data_row  name name_data">
+                                <div>
+                                    <img src="./image_assets/elijah-hiett-vAVGdV1oklQ-unsplash.jpg" alt="profile_image">
+                                </div>
+                                <p>David Sanchez</p>
+                            </div>
+                            <div class="data_row  date">19/1/2018</div>
+                            <div class="data_row  amount">$120</div>
+                            <div class="data_row  status"><p class="delivered">Delivered</p></div>
+                            <div class="data_row  edit_option"><button>Edit</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_wrapper">
+                    <div class="chat_label">
+                        Chat
+                    </div>
+                    <div class="chat_window">
+                        <div class="first_person_wrapper">
+                            <div class="first_person">
+                                <div class="chat_image_wrapper">
+                                    <img src="./image_assets/elijah-hiett-vAVGdV1oklQ-unsplash.jpg" alt="" class="chat_image">
+                                    <p>10:00</p>
+                                </div>
+                                <div class="message_wrapper">
+                                    <p class="profile_name">
+                                        John Deo
+                                    </p>
+                                    <p class="message">
+                                        Hello !
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second_person_wrapper">
+                            <div class="second_person">
+                                <div class="chat_image_wrapper">
+                                    <img src="./image_assets/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="" class="chat_image">
+                                    <p>10:01</p>
+                                </div>
+                                <div class="message_wrapper">
+                                    <p class="profile_name">
+                                        Smith
+                                    </p>
+                                    <p class="message">
+                                        hey, how are you, what about our next meeting ?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="first_person_wrapper">
+                            <div class="first_person">
+                                <div class="chat_image_wrapper">
+                                    <img src="./image_assets/elijah-hiett-vAVGdV1oklQ-unsplash.jpg" alt="" class="chat_image">
+                                    <p>10:04</p>
+                                </div>
+                                <div class="message_wrapper">
+                                    <p class="profile_name">
+                                        John Deo
+                                    </p>
+                                    <p class="message">
+                                        Yeah, Everything is fine .
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second_person_wrapper">
+                            <div class="second_person">
+                                <div class="chat_image_wrapper">
+                                    <img src="./image_assets/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="" class="chat_image">
+                                    <p>10:07</p>
+                                </div>
+                                <div class="message_wrapper">
+                                    <p class="profile_name">
+                                        Smith
+                                    </p>
+                                    <p class="message">
+                                        wow! that's great
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="first_person_wrapper">
+                            <div class="first_person">
+                                <div class="chat_image_wrapper">
+                                    <img src="./image_assets/elijah-hiett-vAVGdV1oklQ-unsplash.jpg" alt="" class="chat_image">
+                                    <p>10:08</p>
+                                </div>
+                                <div class="message_wrapper">
+                                    <p class="profile_name">
+                                        John Deo
+                                    </p>
+                                    <p class="message">
+                                        so, how is project with client going on ?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second_person_wrapper">
+                            <div class="second_person">
+                                <div class="chat_image_wrapper">
+                                    <img src="./image_assets/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="" class="chat_image">
+                                    <p>10:07</p>
+                                </div>
+                                <div class="message_wrapper">
+                                    <p class="profile_name">
+                                        Smith
+                                    </p>
+                                    <p class="message">
+                                        this is a message which is to be deleted
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+                    </div>
+                    <div class="send_message_wrapper">
+                            <form>
+                                <input type="text">
+                                <button>send</button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

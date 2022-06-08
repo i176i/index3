@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div_Bubbling</title>
+    <style>
+        .grand{
+            height: 600px;
+            width: 600px;
+            background-color: aquamarine;
+        }
+        .parent{
+            height:400px;
+            width: 400px;
+            background-color:wheat;
+        }
+        .child{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        .d-flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grand d-flex">
+        <div class="parent d-flex" >
+            <div class="child d-flex" >
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        
+        // grandDiv.addEventListener('click', temp);
+        // parentDiv.addEventListener('click', temp);
+        // childDiv.addEventListener('click', temp);
+
+        // function temp(e){
+            
+        //     console.log(e.currentTarget);
+        // }
+        
+        var grandDiv = document.getElementsByClassName('grand')[0];
+        var parentDiv = document.getElementsByClassName('parent')[0];
+        var childDiv= document.getElementsByClassName('child')[0];
+
+        grandDiv.addEventListener('click',(e)=>{
+            console.log('grand clicked');
+        })
+        parentDiv.addEventListener('click',(e)=>{
+            e.stopImmediatePropagation();
+            console.log('parent clicked');
+        })
+        childDiv.addEventListener('click',()=>{
+        console.log('child clicked');
+        })
+
+    </script>
+</body>
+</html>

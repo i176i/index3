@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #353b48;
+}
+/* styling header element in the following codes */
+
+header{
+    background-color: #f9ca24;
+}
+.inner_header{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    padding:0 10px 0 10px  ;
+}
+
+.header_selections_list{
+    display: flex;
+    list-style: none;
+}
+.header_selections_list li{
+    margin: 1em ;
+}
+.header_selections_list li:hover{
+    color: white;
+}
+
+
+/* Styling complete introduction in the below codes */
+
+.complete_introduction{
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: 1fr;
+    width: 80%;
+    margin: 40px auto 0px auto;
+    background-color: white;
+    border: none;
+}
+.profile_image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.profile_image p{
+    border-radius: 20px;
+    background-color: #f9ca24;
+    margin: 20px auto 20px auto;
+    width: 75%;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+}
+.profile_image img{
+    /* height: 20em;
+    width: 20em; */
+    width: 75%;
+    margin: 30px auto 0px auto;
+    border-radius: 10px;
+}
+.profile_introduction{
+    height: 200px;
+    margin-top: 20px;
+}  
+
+
+.full_name{
+    margin-bottom: 5px;
+}
+.full_name span{
+    color: #f9ca24;
+}
+.profile_introduction h3{
+    margin-top: 0;
+    padding: 0;
+    color: rgb(80, 79, 79);
+}
+.description_table td{
+    width: 100px;
+}
+.social_icons_wrapper{
+    height: 30px;
+    width: 80%;
+    margin: 10px 0px 10px 0px;
+}
+.social_icons{
+    height:100%;
+    margin: 10px;
+}
+
+/* skill section */
+
+
+.skill_outer{
+    display: grid;
+    
+    width: 80%;
+    margin: auto;
+    background-color: rgb(220, 220, 220);
+    border: none;
+}
+.skill_label{
+    border: 2px solid rgb(106, 106, 106);
+    margin: 20px auto 20px auto;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.skill_data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+.development_skills{
+    padding: 20px;
+}
+
+.design_skills{
+    padding: 20px;
+}
+
+.outer_bar{
+    margin:0px 0px 0px 10px;
+    width: 80%;
+    height: 20px;
+    background-color: white;
+    border-radius: 6px;
+}
+.inner_bar_wordpress{
+    width: 85%;
+}
+.inner_bar_mysql{
+    width: 60%;
+}
+.inner_bar_html{
+    width: 75%;
+}
+.inner_bar_js{
+    width: 50%;
+}
+.inner_bar_photoshop{
+    width: 30%;
+}
+.inner_bar_illustrator{
+    width: 60%;
+}
+.inner_bar_creativeDesign{
+    width: 40%;
+}
+.inner_bar{
+    padding-right: 10px;
+    text-align: end;
+    height: 100%;
+    background-color: #f9ca24;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+
+
+
+

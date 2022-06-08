@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temp</title>
+    <script src="/tempdelete/index.js"></script>
+</head>
+<body>
+    <h3>Hello World</h3>
+    <hr>
+    <h2>Welcome to GeekyAnts!</h2>
+    <p>Welcome in the company of geeks! here you will learn a lot in new technologies like React.js, React-Native and flutter, well above all you will get the best North Indian food here 😜</p>
+    <hr>
+    <h2>Registration Form</h2>
+    <form id="inputForm" onsubmit="return(checkValidationss());">
+        <label>User Id : </label>
+        <input type="text" placeholder="required and must be length of 5 to 12" minlength="5" maxlength="12" required><br><br>
+        
+        <label>Password : </label>
+        <input type="password" placeholder="required and must be length of 7 to 12" minlength="7" maxlength="12" required><br><br>
+
+        <label>Name : </label>
+        <input type="text" placeholder="required and alphabates only" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br><br>
+
+        <label>Address : </label>
+        <input type="text" placeholder="optional"><br><br>
+
+        <label>Country : </label>
+        <select name="countries">
+            <option value="india">India</option>
+            <option value="afganistan">Afganistan</option>
+            <option value="usa" selected>USA</option>
+            <option value="russia">Russia</option>
+        </select>
+
+        <label>ZIP Code : </label>
+        <input type="number" required ><br><br>
+
+        <label>Email : </label>
+        <input type="email"> <br><br>
+
+        <div>
+                <label>Sex : </label>
+                <input type="radio" name="sex" value="male">
+                <label >Male : </label>
+                
+                <input type="radio" name="sex" value="female">
+                <label >Female : </label>
+        </div><br>
+
+        <div>
+            <label>Language : </label>
+            <input type="checkbox" name="lang" value="english" id="english" ><label>English</label>
+            <input type="checkbox" name="lang" value="non-english" id="nonEnglish"><label>Non-English</label>
+        </div>
+        <div>
+            <label>About : </label>
+            <div>
+                <textarea></textarea>
+            </div>
+            
+        </div>
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+</html>
