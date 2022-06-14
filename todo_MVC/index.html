@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+  <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+        <h1 class="heading-design">todo</h1>
+        <div class="container">
+            <div class="container__card top-10"></div>
+            <div class="container__card top-5"></div>
+            <div id="todo">
+                <div class="input-sort">
+                    <input type="text" class="input-design" name="item" id="add-item" placeholder="What need to be done " />
+                </div>
+                <ul id="list"></ul>
+                <div class="filters">
+                    <p></p>
+                    <div class="filter-options">
+                        <button class="btn-design"  id="all">All</button>
+                        <button class="btn-design"  id="completed">Completed</button>
+                        <button  class="btn-design" id="remaining">Remaining</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./app.js"></script>
+  </body>
+</html>
