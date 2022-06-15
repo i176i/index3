@@ -139,6 +139,7 @@ const controller = {
         model.notCompleted.push(itemToArray);
         document.querySelector('input[type=text]').value="";
         if(model.currentState.length==0){
+            model.currentClicked='all';
             model.currentState = model.items;
         }
         view.render(model.currentState);
@@ -177,8 +178,6 @@ clearAllCompleted.addEventListener('click',()=>{
     temparr = model.items.filter((itemss)=>{
         return !itemss.iscompleted;
     })
-    
-    // console.log(temparr);
     model.items = temparr;
     controller.resetData();
     model.currentState = model.items;
@@ -208,7 +207,6 @@ remainingTasks.addEventListener('click',()=>{
     model.currentState = model.notCompleted;
     view.render(model.currentState);
 })
-
 //adding event listener to the body to listen to ENTER click
 document.addEventListener('keypress',controller.addItemOnEnter);
 controller.init();

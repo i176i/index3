@@ -16,7 +16,6 @@ body{
     border-radius: 25px;
     display: inline-block;
     border: 1px solid rgb(209, 209, 209);
-    /* margin-bottom: 10px; */
 }
 .img-setter{
     height: 25px;
@@ -30,7 +29,6 @@ li{
     padding:8px 5px 8px 20px  ;
 }
 ul{
-    /* padding: 20px 5px 20px 20px; */
     padding: 0px;
     margin: 0%;
 }
@@ -108,7 +106,6 @@ ul{
     color: rgb(223, 194, 199);
     font-size: 120px;
     font-weight: 100;
-    /* font-weight: 1px; */
 }
 .input-design{
     height: 50px;
@@ -119,18 +116,15 @@ ul{
     font-family: 'Montserrat', sans-serif;
 }
 .input-design:focus{
-    /* background-color: rebeccapurple; */
     outline: none;
 }
 .btn-design{
     height: 40px;
-    /* width: 100px; */
     text-align: center;
     font-size: 14px;
     border: none;
     color: rgb(150, 150, 150);
     background: none;
-    /* border-radius: 20px; */
     cursor: pointer;
 }
 .delete-btn{
@@ -143,7 +137,6 @@ ul{
     margin:5px 10px 5px 30px ;
     height: 30px;
     width: 30px;
-    /* display: none; */
 }
 .delete-btn:hover{
     background-color: rgb(255, 121, 121);
