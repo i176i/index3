@@ -12,6 +12,15 @@ const view = {
     init(){
         this.completeList = document.getElementById('list');
         this.render(model.items);
+        this.addHoverToCheckAll();
+    },
+    addHoverToCheckAll(){
+        document.querySelector('.check-all').addEventListener('mouseenter',()=>{
+            document.querySelector('.check-all-arrow').style.backgroundColor = 'rgb(166, 166, 166)';
+            document.querySelector('.check-all').addEventListener('mouseleave',()=>{
+                document.querySelector('.check-all-arrow').style.backgroundColor = 'rgb(220, 220, 220)';
+            })
+        })
     },
     render(items){
         let counter = document.querySelector('.filters p');
@@ -28,12 +37,16 @@ const view = {
             todoItems.style.display='none';
             let filters = document.querySelector('.filters');
             filters.style.display='none';
+            let clearCompleted = document.querySelector('.clear-complete');
+            clearCompleted.style.display='none'
         }
         else{
             let todoItems = document.querySelector('#list');
             todoItems.style.display='block';
             let filters = document.querySelector('.filters');
             filters.style.display='flex';
+            let clearCompleted = document.querySelector('.clear-complete');
+            clearCompleted.style.display='inline';
         }
         for(let i=0; i<items.length; i++){
             let elem = document.createElement('li') ;
@@ -85,6 +98,10 @@ const controller = {
     init(){
         view.init();
     },
+    resetData(){
+        model.notCompleted = model.items.filter(this.checkNotCompleted);
+        model.completed = model.items.filter(this.checkCompleted);
+    },
     checkAsDone(id){
         let items = this.getItems();        
         
@@ -92,6 +109,16 @@ const controller = {
             if(items[i].key==id){
                 items[i].iscompleted = !(items[i].iscompleted);
             }
+        }
+        this.resetData();
+        if(model.currentClicked=='all'){
+            model.currentState=model.items;
+        }
+        else if(model.currentClicked=='completed'){
+            model.currentState=model.completed;
+        }
+        else{
+            model.currentState= model.notCompleted;
         }
         view.render(model.currentState);
     },
@@ -119,7 +146,7 @@ const controller = {
     deleteItem(itemNumber){
         let items = this.getItems();
         items.splice(itemNumber,1);  
-        view.render(items);
+        view.render(model.currentState);
     },
     addItemOnEnter(e){
         if(e.keyCode==13 ){
@@ -134,7 +161,30 @@ const controller = {
     },
 }
 
+let checkAllAtOnce = document.querySelector('.check-all');
+checkAllAtOnce.addEventListener('click',()=>{
+    for(let i=0; i<model.items.length; i++){
+        if(!model.items[i].iscompleted){
+            controller.checkAsDone(model.items[i].key);
+        }
+    }
+    view.render(model.currentState);
+})
 
+let clearAllCompleted = document.querySelector('.clear-complete');
+clearAllCompleted.addEventListener('click',()=>{
+    let temparr=[];
+    temparr = model.items.filter((itemss)=>{
+        return !itemss.iscompleted;
+    })
+    
+    // console.log(temparr);
+    model.items = temparr;
+    controller.resetData();
+    model.currentState = model.items;
+    model.currentClicked = 'all';
+    view.render(model.currentState);
+})
 
 let alltasks = document.querySelector('#all')
 alltasks.addEventListener('click',()=>{
@@ -146,15 +196,15 @@ alltasks.addEventListener('click',()=>{
 let completedTasks = document.querySelector('#completed')
 completedTasks.addEventListener('click',()=>{
     model.currentClicked='completed';
-    model.completed = model.items.filter(controller.checkCompleted)
-    model.currentState = model.completed
+    model.completed = model.items.filter(controller.checkCompleted);
+    model.currentState = model.completed;
     view.render(model.currentState);
 })
 
 let remainingTasks = document.querySelector('#remaining')
 remainingTasks.addEventListener('click',()=>{
     model.currentClicked='remaining';
-    model.notCompleted = model.items.filter(controller.checkNotCompleted)
+    model.notCompleted = model.items.filter(controller.checkNotCompleted);
     model.currentState = model.notCompleted;
     view.render(model.currentState);
 })

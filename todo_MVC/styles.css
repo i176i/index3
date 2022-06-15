@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Lato:wght@100&family=Montserrat:wght@100&display=swap');
 
 *{
-    transition:  0.2s;
+    transition:  0.1s;
 }
 body{
     background-color: rgb(232, 232, 232);
@@ -45,23 +45,22 @@ ul{
     position: absolute;
     height: 100%;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 5px 5px rgb(212, 212, 212);
+    box-shadow: 0px 0px 3px 3px rgb(212, 212, 212);
 }
 .top-10{
-    top: 10px;
+    top: 12px;
     z-index: -5;
-    width: 84%;
+    width: 82%;
 }
 .top-5{
-    width: 86%;
-    top: 5px;
+    width: 84%;
+    top: 6px;
     z-index: -4;
 }
 #todo{
     width: 650px;
     background-color: white;
-
-    box-shadow: 0px 0px 5px 2px rgb(212, 212, 212);
+    box-shadow: 0px 0px 3px 3px rgb(212, 212, 212);
 }
 #list p{
     width: 80%;
@@ -70,6 +69,19 @@ ul{
     display: flex;
     align-items: center;
 }
+.check-all{
+    width: 4%;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    height: 20px;
+}
+.check-all-arrow{
+    height: 90%;
+    width: 100%;
+    background-color: rgb(220, 220, 220);
+    clip-path: polygon(0% 25%, 0% 0%, 50% 75%, 100% 0%, 100% 25%, 50% 100%);
+}
 .filters{
     display: flex;
     padding: 10px 20px 10px 20px;
@@ -77,20 +89,25 @@ ul{
     align-items: center;
     border-top:  1px solid rgb(150, 150, 150);
 }
-.filters p{
+.filters p, .filters div{
     color: rgb(150, 150, 150);
 }
 .filter-options{
-    width: 50%;
+    width: 35%;
+}
+.clear-complete{
+    width: 25%;
+    padding: 5px;
+    cursor: pointer;
 }
 .heading-design{
-    /* font-family: 'Dosis', sans-serif; */
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: block;
     margin: 0px 0px 40px 0px;
     text-align: center;
     color: rgb(223, 194, 199);
     font-size: 120px;
+    font-weight: 100;
     /* font-weight: 1px; */
 }
 .input-design{
