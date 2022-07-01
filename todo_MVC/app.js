@@ -1,10 +1,24 @@
 // model to handle all the data of the app
-const model = {
+
+const model = localStorage.getItem('modelLocal') ? JSON.parse(localStorage.getItem('modelLocal')) : {
     currentState:[],
     currentClicked:'all',
     items : [],
     completed : [], 
     notCompleted : [],
+}
+// var model = modelSchema;
+if(localStorage.getItem('modelLocal')){
+    localStorage.setItem('modelLocal',JSON.stringify(model));
+}else{
+    model =  JSON.parse(localStorage.getItem('modelLocal'));
+    
+}
+function setIntoLocal(){
+    localStorage.setItem('modelLocal',JSON.stringify(model));
+}
+function getItemFromLocal(){
+    model = JSON.parse(localStorage.getItem('modelLocal'));
 }
 
 // view to handle the frontend of the app
@@ -23,6 +37,8 @@ const view = {
         })
     },
     render(items){
+        // console.log('rendered');
+        setIntoLocal();
         let counter = document.querySelector('.filters p');
         let count=0;
         for(let i=0; i<model.items.length; i++){
@@ -146,7 +162,7 @@ const controller = {
     },
     deleteItem(itemNumber){
         let items = this.getItems();
-        items.splice(itemNumber,1);  
+        items.splice(itemNumber,1);
         view.render(model.currentState);
     },
     addItemOnEnter(e){
